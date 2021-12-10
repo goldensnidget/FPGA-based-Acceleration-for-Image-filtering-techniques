@@ -1,0 +1,11 @@
+Thu Dec  9 16:58:45 2021: Server was asked to start on port: '43811'
+Thu Dec  9 16:58:45 2021: Server is using token UUID: 'bbb2616e-6c21-49af-b3ec-ea4d6f1f19f8'
+Thu Dec  9 16:58:45 2021: Attempting to start server on port '43811'
+Thu Dec  9 16:58:45 2021: XRC main fifo: created main fifo '/tmp/xrcmainbbb2616e-6c21-49af-b3ec-ea4d6f1f19f8', fd read = 13
+Thu Dec  9 16:58:45 2021: Running Rule Check Server
+Thu Dec  9 16:58:45 2021: Version 1.6.1
+Thu Dec  9 16:58:45 2021: Rule Check Server: Accepted socket connection from client
+Thu Dec  9 16:58:45 2021: EXCHANGE_TOKEN received, server token: bbb2616e-6c21-49af-b3ec-ea4d6f1f19f8, passed token: bbb2616e-6c21-49af-b3ec-ea4d6f1f19f8
+Thu Dec  9 16:58:45 2021: SESSION_MGR: creating session with session uuid: '9553c79e-a8ed-4de5-89ce-62e83b90fdcb' and name 'v++_compile_Filter2DKernel.hw_emu'
+Thu Dec  9 16:59:07 2021: Rule Check Server: Accepted socket connection from client
+Thu Dec  9 17:00:54 2021: SESSION_MGR: closing session for UUID '9553c79e-a8ed-4de5-89ce-62e83b90fdcb' with name 'v++_compile_Filter2DKernel.hw_emu'

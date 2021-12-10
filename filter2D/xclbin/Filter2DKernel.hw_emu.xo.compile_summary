@@ -1,0 +1,246 @@
+<ENTRY>
+{
+ "thisFile": "/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/xclbin/Filter2DKernel.hw_emu.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Dec  9 16:58:42 2021",
+ "timestampMillis": "1639069122876",
+ "buildStep": {
+  "cmdId": "fc8a889a-f3be-4fa5-8f60-0431c4f31322",
+  "name": "v++",
+  "logFile": "/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/builddir.3k.hw_emu/Filter2DKernel.hw_emu/Filter2DKernel.hw_emu.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2021.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -c -t hw_emu --profile_kernel data:all:all:all --profile_kernel stall:all:all:all -I./src/kernel --temp_dir builddir.3k.hw_emu --platform /home/ec2-user/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm -k Filter2DKernel ./src/kernel/axi2stream.cpp ./src/kernel/filter2d.cpp ./src/kernel/readcoeffs.cpp -o xclbin/Filter2DKernel.hw_emu.xo ",
+  "args": [
+   "-c",
+   "-t",
+   "hw_emu",
+   "--profile_kernel",
+   "data:all:all:all",
+   "--profile_kernel",
+   "stall:all:all:all",
+   "-I./src/kernel",
+   "--temp_dir",
+   "builddir.3k.hw_emu",
+   "--platform",
+   "/home/ec2-user/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm",
+   "-k",
+   "Filter2DKernel",
+   "./src/kernel/axi2stream.cpp",
+   "./src/kernel/filter2d.cpp",
+   "./src/kernel/readcoeffs.cpp",
+   "-o",
+   "xclbin/Filter2DKernel.hw_emu.xo"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Dec  9 16:58:42 2021",
+ "timestampMillis": "1639069122877",
+ "status": {
+  "cmdId": "fc8a889a-f3be-4fa5-8f60-0431c4f31322",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Dec  9 16:58:50 2021",
+ "timestampMillis": "1639069130260",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm",
+  "hardwareDsa": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa",
+  "platformDirectory": "/home/ec2-user/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW_EMU",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "Filter2DKernel",
+     "file": "/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/xclbin/Filter2DKernel.hw_emu.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/axi2stream.cpp",
+     "/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp",
+     "/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2021.1. SW Build 3246112 on 2021-06-09-14:19:56"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Dec  9 16:58:50 2021",
+ "timestampMillis": "1639069130271",
+ "buildStep": {
+  "cmdId": "67ad6b44-48d4-49ec-bb49-d1044a1e3bf3",
+  "name": "vitis_hls",
+  "logFile": "/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/builddir.3k.hw_emu/Filter2DKernel.hw_emu/Filter2DKernel/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/builddir.3k.hw_emu/Filter2DKernel.hw_emu/Filter2DKernel/Filter2DKernel.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/builddir.3k.hw_emu/Filter2DKernel.hw_emu/Filter2DKernel/Filter2DKernel.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Dec  9 16:58:50 2021",
+ "timestampMillis": "1639069130272",
+ "status": {
+  "cmdId": "67ad6b44-48d4-49ec-bb49-d1044a1e3bf3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Dec  9 17:00:54 2021",
+ "timestampMillis": "1639069254738",
+ "status": {
+  "cmdId": "67ad6b44-48d4-49ec-bb49-d1044a1e3bf3",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Dec  9 17:00:54 2021",
+ "timestampMillis": "1639069254754",
+ "report": {
+  "path": "/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/builddir.3k.hw_emu/Filter2DKernel.hw_emu/Filter2DKernel/Filter2DKernel/solution/.autopilot/db/Filter2DKernel.design.xml",
+  "name": "Filter2DKernel",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Dec  9 17:00:54 2021",
+ "timestampMillis": "1639069254754",
+ "report": {
+  "path": "/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/builddir.3k.hw_emu/Filter2DKernel.hw_emu/Filter2DKernel/Filter2DKernel/solution/.autopilot/db/.message_syn.xml",
+  "name": "Filter2DKernel",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Dec  9 17:00:54 2021",
+ "timestampMillis": "1639069254755",
+ "report": {
+  "path": "/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/builddir.3k.hw_emu/reports/Filter2DKernel.hw_emu/hls_reports/Filter2DKernel_csynth.rpt",
+  "name": "Filter2DKernel",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Dec  9 17:00:54 2021",
+ "timestampMillis": "1639069254755",
+ "report": {
+  "path": "/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/builddir.3k.hw_emu/Filter2DKernel.hw_emu/Filter2DKernel/Filter2DKernel/solution/syn/report/Filter2DKernel_csynth.xml",
+  "name": "Filter2DKernel",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Dec  9 17:00:54 2021",
+ "timestampMillis": "1639069254771",
+ "report": {
+  "path": "/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/builddir.3k.hw_emu/reports/Filter2DKernel.hw_emu/system_estimate_Filter2DKernel.hw_emu.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Dec  9 17:00:55 2021",
+ "timestampMillis": "1639069255020",
+ "report": {
+  "path": "/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/builddir.3k.hw_emu/reports/Filter2DKernel.hw_emu/v++_compile_Filter2DKernel.hw_emu_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Dec  9 17:00:55 2021",
+ "timestampMillis": "1639069255021",
+ "report": {
+  "path": "/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/builddir.3k.hw_emu/v++_compile_Filter2DKernel.hw_emu_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Dec  9 17:00:55 2021",
+ "timestampMillis": "1639069255021",
+ "status": {
+  "cmdId": "fc8a889a-f3be-4fa5-8f60-0431c4f31322",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

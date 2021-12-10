@@ -1,0 +1,820 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis_HLS/2021.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2021.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'ec2-user' on host 'ip-172-31-3-89.ec2.internal' (Linux_x86_64 version 4.14.238-182.422.amzn2.x86_64) on Thu Dec 09 16:58:54 UTC 2021
+INFO: [HLS 200-10] On os "Amazon Linux release 2 (Karoo)"
+INFO: [HLS 200-10] In directory '/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/builddir.3k.hw_emu/Filter2DKernel.hw_emu/Filter2DKernel'
+Sourcing Tcl script 'Filter2DKernel.tcl'
+INFO: [HLS 200-1510] Running: open_project Filter2DKernel 
+INFO: [HLS 200-10] Creating and opening project '/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/builddir.3k.hw_emu/Filter2DKernel.hw_emu/Filter2DKernel/Filter2DKernel'.
+INFO: [HLS 200-1510] Running: set_top Filter2DKernel 
+INFO: [HLS 200-1510] Running: add_files /home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/axi2stream.cpp -cflags  -I /home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel  
+INFO: [HLS 200-10] Adding design file '/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/axi2stream.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files /home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp -cflags  -I /home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel  
+INFO: [HLS 200-10] Adding design file '/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files /home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp -cflags  -I /home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel  
+INFO: [HLS 200-10] Adding design file '/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -flow_target vitis solution 
+INFO: [HLS 200-10] Creating and opening solution '/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/builddir.3k.hw_emu/Filter2DKernel.hw_emu/Filter2DKernel/Filter2DKernel/solution'.
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu9p-flgb2104-2-i 
+INFO: [HLS 200-1611] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [HLS 200-1510] Running: create_clock -period 250.000000MHz -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-1510] Running: config_dataflow -strict_mode warning 
+INFO: [HLS 200-1510] Running: config_export -disable_deadlock_detection=true 
+INFO: [HLS 200-1510] Running: config_rtl -m_axi_conservative_mode=1 
+WARNING: [HLS 200-483] The 'config_rtl -m_axi_conservative_mode' command is deprecated and will be removed in a future release. Use 'config_interface -m_axi_conservative_mode' as its replacement.
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=0 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -ipname Filter2DKernel 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 110.232 MB.
+INFO: [HLS 200-10] Analyzing design file '/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp' ... 
+WARNING: [HLS 207-5301] unused parameter 'print': /tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h:792:16
+INFO: [HLS 200-10] Analyzing design file '/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp' ... 
+WARNING: [HLS 207-5528] Ignore interface attribute or pragma which is not used in top function: /home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:72:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: /home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:89:24
+Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=214-113.html
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: /home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:95:59
+Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=214-113.html
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file /home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp
+Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-471.html
+WARNING: [HLS 207-5301] unused parameter 'print': /tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h:792:16
+INFO: [HLS 200-10] Analyzing design file '/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/axi2stream.cpp' ... 
+WARNING: [HLS 207-5301] unused parameter 'print': /tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h:792:16
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 15.77 seconds. CPU system time: 1.69 seconds. Elapsed time: 16.25 seconds; current allocated memory: 112.533 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 214-279] Initial Interval estimation mode is set into default.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'hls::stream<unsigned char, 0>::write(unsigned char const&)' into 'hls::stream<unsigned char, 0>::operator<<(unsigned char const&)' (/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:129:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<unsigned char, 0>::operator<<(unsigned char const&)' into 'AXIBursts2PixelStream(ap_uint<512>*, unsigned short, unsigned short, unsigned short, hls::stream<unsigned char, 0>&)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/axi2stream.cpp:48:48)
+INFO: [HLS 214-131] Inlining function 'hls::stream<unsigned char, 0>::read(unsigned char&)' into 'hls::stream<unsigned char, 0>::read()' (/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::Window<15, 15, unsigned char>::insert_col(unsigned char*, int)' into 'hls::Window<15, 15, unsigned char>::insert_right_col(unsigned char*)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:473:2)
+INFO: [HLS 214-131] Inlining function 'hls::stream<unsigned char, 0>::read()' into 'Window2D<1935u, 15u, 15u, unsigned char>::next(hls::stream<unsigned char, 0>&)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/window2d.h:44:37)
+INFO: [HLS 214-131] Inlining function 'hls::Window<15, 15, unsigned char>::insert_pixel(unsigned char, int, int)' into 'Window2D<1935u, 15u, 15u, unsigned char>::next(hls::stream<unsigned char, 0>&)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/window2d.h:61:20)
+INFO: [HLS 214-131] Inlining function 'hls::Window<15, 15, unsigned char>::insert_pixel(unsigned char, int, int)' into 'Window2D<1935u, 15u, 15u, unsigned char>::next(hls::stream<unsigned char, 0>&)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/window2d.h:59:20)
+INFO: [HLS 214-131] Inlining function 'hls::LineBuffer<14, 1935, unsigned char, 0>::get_col(unsigned char*, int)' into 'Window2D<1935u, 15u, 15u, unsigned char>::next(hls::stream<unsigned char, 0>&)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/window2d.h:45:15)
+INFO: [HLS 214-131] Inlining function 'hls::LineBuffer<14, 1935, unsigned char, 0>::shift_pixels_up(int)' into 'Window2D<1935u, 15u, 15u, unsigned char>::next(hls::stream<unsigned char, 0>&)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/window2d.h:46:15)
+INFO: [HLS 214-131] Inlining function 'hls::Window<15, 15, unsigned char>::insert_right_col(unsigned char*)' into 'Window2D<1935u, 15u, 15u, unsigned char>::next(hls::stream<unsigned char, 0>&)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/window2d.h:49:13)
+INFO: [HLS 214-131] Inlining function 'hls::Window<15, 15, unsigned char>::shift_pixels_left()' into 'Window2D<1935u, 15u, 15u, unsigned char>::next(hls::stream<unsigned char, 0>&)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/window2d.h:48:13)
+INFO: [HLS 214-131] Inlining function 'hls::LineBuffer<14, 1935, unsigned char, 0>::insert_bottom_row(unsigned char, int)' into 'Window2D<1935u, 15u, 15u, unsigned char>::next(hls::stream<unsigned char, 0>&)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/window2d.h:47:15)
+INFO: [HLS 214-131] Inlining function 'hls::Window<15, 15, unsigned char>::getval(int, int)' into 'hls::Window<15, 15, unsigned char>::operator()(int, int)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:506:9)
+INFO: [HLS 214-131] Inlining function 'hls::Window<15, 15, unsigned char>::operator()(int, int)' into 'Window2D<1935u, 15u, 15u, unsigned char>::operator()(int, int)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/window2d.h:73:9)
+INFO: [HLS 214-131] Inlining function 'readcoeffs(ap_uint<512> const*, short (*) [15])' into 'Filter2D(ap_uint<512> const*, hls::stream<unsigned char, 0>&, unsigned short, unsigned short, hls::stream<unsigned char, 0>&)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:22:2)
+INFO: [HLS 214-131] Inlining function 'hls::stream<unsigned char, 0>::operator<<(unsigned char const&)' into 'Filter2D(ap_uint<512> const*, hls::stream<unsigned char, 0>&, unsigned short, unsigned short, hls::stream<unsigned char, 0>&)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:47:20)
+INFO: [HLS 214-131] Inlining function 'Window2D<1935u, 15u, 15u, unsigned char>::next(hls::stream<unsigned char, 0>&)' into 'Filter2D(ap_uint<512> const*, hls::stream<unsigned char, 0>&, unsigned short, unsigned short, hls::stream<unsigned char, 0>&)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:29:14)
+INFO: [HLS 214-131] Inlining function 'Window2D<1935u, 15u, 15u, unsigned char>::operator()(int, int)' into 'Filter2D(ap_uint<512> const*, hls::stream<unsigned char, 0>&, unsigned short, unsigned short, hls::stream<unsigned char, 0>&)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:37:24)
+INFO: [HLS 214-131] Inlining function 'hls::stream<unsigned char, 0>::read(unsigned char&)' into 'hls::stream<unsigned char, 0>::operator>>(unsigned char&)' (/tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:125:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<unsigned char, 0>::operator>>(unsigned char&)' into 'PixelStream2AXIBursts(hls::stream<unsigned char, 0>&, unsigned short, unsigned short, unsigned short, ap_uint<512>*)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/axi2stream.cpp:92:46)
+INFO: [HLS 214-131] Inlining function 'hls::stream<unsigned char, 0>::stream()' into 'Filter2DKernel' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:83:18)
+INFO: [HLS 214-131] Inlining function 'hls::stream<unsigned char, 0>::stream()' into 'Filter2DKernel' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:84:18)
+INFO: [HLS 214-210] Disaggregating variable 'pixelWindow' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13:37)
+INFO: [HLS 214-210] Disaggregating variable 'pixelWindow.2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13:37)
+INFO: [HLS 214-210] Disaggregating variable 'pixelWindow.1' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13:37)
+INFO: [HLS 214-210] Disaggregating variable 'pixelWindow.0' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13:37)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_828_1' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:828:23) in function 'Filter2D' completely with a factor of 14 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_732_1' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:732:23) in function 'Filter2D' completely with a factor of 13 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_128_1' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:128:23) in function 'Filter2D' completely with a factor of 15 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_130_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:130:20) in function 'Filter2D' completely with a factor of 14 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_130_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:130:20) in function 'Filter2D' completely with a factor of 14 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_130_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:130:20) in function 'Filter2D' completely with a factor of 14 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_130_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:130:20) in function 'Filter2D' completely with a factor of 14 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_130_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:130:20) in function 'Filter2D' completely with a factor of 14 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_130_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:130:20) in function 'Filter2D' completely with a factor of 14 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_130_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:130:20) in function 'Filter2D' completely with a factor of 14 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_130_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:130:20) in function 'Filter2D' completely with a factor of 14 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_130_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:130:20) in function 'Filter2D' completely with a factor of 14 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_130_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:130:20) in function 'Filter2D' completely with a factor of 14 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_130_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:130:20) in function 'Filter2D' completely with a factor of 14 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_130_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:130:20) in function 'Filter2D' completely with a factor of 14 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_130_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:130:20) in function 'Filter2D' completely with a factor of 14 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_130_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:130:20) in function 'Filter2D' completely with a factor of 14 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_130_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:130:20) in function 'Filter2D' completely with a factor of 14 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_408_1' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:408:23) in function 'Filter2D' completely with a factor of 15 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_22_1' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:22:22) in function 'Filter2D' completely with a factor of 15 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_25_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:25:19) in function 'Filter2D' completely with a factor of 15 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_25_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:25:19) in function 'Filter2D' completely with a factor of 15 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_25_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:25:19) in function 'Filter2D' completely with a factor of 15 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_25_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:25:19) in function 'Filter2D' completely with a factor of 15 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_25_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:25:19) in function 'Filter2D' completely with a factor of 15 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_25_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:25:19) in function 'Filter2D' completely with a factor of 15 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_25_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:25:19) in function 'Filter2D' completely with a factor of 15 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_25_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:25:19) in function 'Filter2D' completely with a factor of 15 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_25_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:25:19) in function 'Filter2D' completely with a factor of 15 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_25_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:25:19) in function 'Filter2D' completely with a factor of 15 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_25_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:25:19) in function 'Filter2D' completely with a factor of 15 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_25_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:25:19) in function 'Filter2D' completely with a factor of 15 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_25_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:25:19) in function 'Filter2D' completely with a factor of 15 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_25_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:25:19) in function 'Filter2D' completely with a factor of 15 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_25_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:25:19) in function 'Filter2D' completely with a factor of 15 (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-178] Inlining function 'hls::LineBuffer<14, 1935, unsigned char, 0>::LineBuffer()' into 'Window2D<1935u, 15u, 15u, unsigned char>::Window2D(unsigned short, unsigned short)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/window2d.h:32:0)
+INFO: [HLS 214-178] Inlining function 'cXY::cXY()' into 'Window2D<1935u, 15u, 15u, unsigned char>::Window2D(unsigned short, unsigned short)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/window2d.h:32:0)
+INFO: [HLS 214-178] Inlining function 'Window2D<1935u, 15u, 15u, unsigned char>::Window2D(unsigned short, unsigned short)' into 'Filter2D(ap_uint<512> const*, hls::stream<unsigned char, 0>&, unsigned short, unsigned short, hls::stream<unsigned char, 0>&)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-178] Inlining function 'Window2D<1935u, 15u, 15u, unsigned char>::done()' into 'Filter2D(ap_uint<512> const*, hls::stream<unsigned char, 0>&, unsigned short, unsigned short, hls::stream<unsigned char, 0>&)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-178] Inlining function 'cXY::update(unsigned short, bool)' into 'Filter2D(ap_uint<512> const*, hls::stream<unsigned char, 0>&, unsigned short, unsigned short, hls::stream<unsigned char, 0>&)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-178] Inlining function 'Window2D<1935u, 15u, 15u, unsigned char>::valid()' into 'Filter2D(ap_uint<512> const*, hls::stream<unsigned char, 0>&, unsigned short, unsigned short, hls::stream<unsigned char, 0>&)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:11:0)
+INFO: [HLS 214-241] Aggregating maxi variable 'dst' with non-compact mode in 512-bits (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:62:0)
+INFO: [HLS 214-241] Aggregating maxi variable 'src' with non-compact mode in 512-bits (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:62:0)
+INFO: [HLS 214-241] Aggregating maxi variable 'coeffs' with non-compact mode in 512-bits (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:62:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 512 in loop 'aximm2bytes'(/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/axi2stream.cpp:34:15) has been inferred on port 'port0'. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/axi2stream.cpp:34:15)
+INFO: [HLS 214-115] Multiple burst reads of length 8 and bit width 512 in loop 'rd_coeffs'(/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:13:13) has been inferred on port 'port1'. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:13:13)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 512 in loop 'bytes2aximm'(/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/axi2stream.cpp:98:22) has been inferred on port 'port1'. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/axi2stream.cpp:98:22)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i512.s_struct.ap_uints' into 'PixelStream2AXIBursts(hls::stream<unsigned char, 0>&, unsigned short, unsigned short, unsigned short, ap_uint<512>*) (.1)' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/axi2stream.cpp:101:19)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 11.82 seconds. CPU system time: 0.49 seconds. Elapsed time: 12.72 seconds; current allocated memory: 124.652 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 124.655 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.68 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.79 seconds; current allocated memory: 133.282 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /tools/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_ref.h:388: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 142.810 MB.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'pixels2bytes' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/axi2stream.cpp:79) in function 'PixelStream2AXIBursts' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'filter' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/window2d.h:41) in function 'Filter2D' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'bytes2pixels' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/axi2stream.cpp:41) in function 'AXIBursts2PixelStream' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_90_1' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/axi2stream.cpp:79) in function 'PixelStream2AXIBursts' completely with a factor of 64.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_54_1' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/window2d.h:55) in function 'Filter2D' completely with a factor of 15.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_55_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/window2d.h:55) in function 'Filter2D' completely with a factor of 15.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_33_1' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:32) in function 'Filter2D' completely with a factor of 15.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_35_2' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/window2d.h:71) in function 'Filter2D' completely with a factor of 15.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_45_1' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/axi2stream.cpp:45) in function 'AXIBursts2PixelStream' completely with a factor of 64.
+INFO: [XFORM 203-101] Partitioning array 'pixelWindow.mWindow.val' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pixelWindow.mWindowIn.val' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pixelWindow.mLineBuffer.val' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'coeffs' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:18) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmp.V' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/readcoeffs.cpp:9) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pixelWindow.mWindow.val' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'pixelWindow.mWindowIn.val' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'coeffs' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:18) in dimension 2 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'Filter2DKernel' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:83:3), detected/extracted 4 process function(s): 
+	 'entry_proc'
+	 'AXIBursts2PixelStream'
+	 'Filter2D'
+	 'PixelStream2AXIBursts'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/window2d.h:44:5) to (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:46:13) in function 'Filter2D'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'Filter2D' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13:13)...221 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 3.56 seconds. CPU system time: 0.04 seconds. Elapsed time: 3.59 seconds; current allocated memory: 182.221 MB.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[0]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[1]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[2]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[3]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[4]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[5]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[6]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[7]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[8]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[9]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[10]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[11]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[12]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[13]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[0]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[1]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[2]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[3]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[4]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[5]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[6]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[7]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[8]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[9]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[10]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[11]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[12]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[13]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[0]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[1]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[2]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[3]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[4]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[5]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[6]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[7]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[8]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[9]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[10]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[11]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[12]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[13]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[0]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[1]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[2]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[3]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[4]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[5]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[6]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[7]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[8]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[9]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[10]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[11]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[12]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[13]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[0]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[1]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[2]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[3]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[4]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[5]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[6]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[7]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[8]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[9]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[10]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[11]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[12]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[13]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[0]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[1]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[2]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[3]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[4]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[5]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[6]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[7]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[8]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[9]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[10]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[11]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[12]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[13]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[0]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[1]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[2]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[3]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[4]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[5]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[6]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[7]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[8]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[9]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[10]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[11]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[12]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pixelWindow.mLineBuffer.val[13]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[0]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[1]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[2]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[3]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[4]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[5]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[6]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[7]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[8]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[9]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[10]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[11]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[12]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pixelWindow.mLineBuffer.val[13]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/filter2d.cpp:13).
+INFO: [HLS 200-472] Inferring partial write operation for 'buff.V' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/axi2stream.cpp:95:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'pixelWindow.mLineBuffer.val[0]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:734:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'pixelWindow.mLineBuffer.val[13]' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/hls_video_mem.h:770:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'buff.V' (/home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/src/kernel/axi2stream.cpp:37:10)
+WARNING: [HLS 200-1449] Process Filter2D has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1.51 seconds. CPU system time: 0.08 seconds. Elapsed time: 1.61 seconds; current allocated memory: 297.173 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Filter2DKernel' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.28 seconds; current allocated memory: 300.819 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 300.868 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIBursts2PixelStream_Pipeline_aximm2bytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'aximm2bytes'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'aximm2bytes'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 301.007 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 301.121 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIBursts2PixelStream_Pipeline_bytes2pixels' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'bytes2pixels'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 64, Final II = 64, Depth = 65, loop 'bytes2pixels'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.65 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.66 seconds; current allocated memory: 303.888 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.6 seconds. CPU system time: 0 seconds. Elapsed time: 0.59 seconds; current allocated memory: 305.695 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIBursts2PixelStream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln34) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.7 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.7 seconds; current allocated memory: 306.300 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.63 seconds. CPU system time: 0 seconds. Elapsed time: 0.64 seconds; current allocated memory: 307.194 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2D_Pipeline_rd_coeffs' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'rd_coeffs'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'rd_coeffs'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.74 seconds. CPU system time: 0 seconds. Elapsed time: 0.75 seconds; current allocated memory: 307.394 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 307.667 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2D_Pipeline_filter' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_224) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_222) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_218) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_220) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_215) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_217) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_212) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_214) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_209) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_211) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_206) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_208) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_203) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_205) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_200) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_202) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_197) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_199) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_194) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_196) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_191) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_193) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_188) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_190) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_185) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_187) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_182) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_184) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_179) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_181) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_176) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_178) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_175) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_173) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_169) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_171) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_166) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_168) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_163) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_165) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_160) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_162) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_157) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_159) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_154) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_156) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_151) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_153) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_148) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_150) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_145) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_147) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_142) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_144) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_139) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_141) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_136) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_138) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_133) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_135) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_130) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_132) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_129) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_223) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_221) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_219) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_216) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_213) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_210) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_207) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_204) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_201) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_198) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_195) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_192) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_189) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_186) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_183) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_180) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_177) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_174) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_172) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_170) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_167) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_164) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_161) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_158) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_155) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_152) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_149) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_146) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_143) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_140) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_137) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_134) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_131) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_128) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_125) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_127) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_124) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_122) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_120) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_118) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_116) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_114) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_112) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_110) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_108) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_106) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_104) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_102) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_100) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_98) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_96) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_94) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_92) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_90) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_88) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_86) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_84) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_82) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_80) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_78) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_76) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_74) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_72) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_70) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_68) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_66) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_64) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_126) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_123) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_121) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_119) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_117) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_115) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_113) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_111) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_109) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_107) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_105) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_103) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_101) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_99) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_97) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_95) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_93) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_91) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_89) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_87) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_85) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_83) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_81) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_79) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_77) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_75) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_73) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_71) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_69) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_67) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_65) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_61) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_63) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_60) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_58) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_56) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_54) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_52) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_50) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_48) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_46) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_44) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_42) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_40) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_38) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_36) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_34) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_32) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_62) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_59) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_57) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_55) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_53) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_51) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_49) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_47) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_45) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_43) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_41) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_39) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_37) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_33) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_29) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_31) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_28) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_26) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_24) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_22) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_20) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_18) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_30) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_27) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_21) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_14) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln37_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'filter'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 19, loop 'filter'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3.6 seconds. CPU system time: 0.32 seconds. Elapsed time: 3.93 seconds; current allocated memory: 317.215 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2.75 seconds. CPU system time: 0.27 seconds. Elapsed time: 3.01 seconds; current allocated memory: 328.615 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2D' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln35) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4.43 seconds. CPU system time: 0.25 seconds. Elapsed time: 4.68 seconds; current allocated memory: 329.630 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.49 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.5 seconds; current allocated memory: 331.719 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PixelStream2AXIBursts_Pipeline_pixels2bytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'pixels2bytes'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 64, Final II = 64, Depth = 65, loop 'pixels2bytes'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.49 seconds; current allocated memory: 334.564 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.59 seconds. CPU system time: 0 seconds. Elapsed time: 0.59 seconds; current allocated memory: 337.546 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PixelStream2AXIBursts_Pipeline_bytes2aximm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'bytes2aximm'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'bytes2aximm'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.47 seconds; current allocated memory: 337.670 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 337.820 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PixelStream2AXIBursts' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln87) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 338.426 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.64 seconds. CPU system time: 0 seconds. Elapsed time: 0.64 seconds; current allocated memory: 339.284 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2DKernel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+WARNING: [HLS 200-1020] Increasing the depth of FIFO dst_c_channel (from entry_proc_U0 to PixelStream2AXIBursts_U0) to 3 to improve performance and/or avoid deadlocks.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.67 seconds. CPU system time: 0 seconds. Elapsed time: 0.67 seconds; current allocated memory: 339.421 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.25 seconds. CPU system time: 0 seconds. Elapsed time: 1.26 seconds; current allocated memory: 339.781 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3.59 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.61 seconds; current allocated memory: 339.929 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIBursts2PixelStream_Pipeline_aximm2bytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'AXIBursts2PixelStream_Pipeline_aximm2bytes' pipeline 'aximm2bytes' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'AXIBursts2PixelStream_Pipeline_aximm2bytes/m_axi_port0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'AXIBursts2PixelStream_Pipeline_aximm2bytes/m_axi_port0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'AXIBursts2PixelStream_Pipeline_aximm2bytes/m_axi_port0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'AXIBursts2PixelStream_Pipeline_aximm2bytes/m_axi_port0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'AXIBursts2PixelStream_Pipeline_aximm2bytes/m_axi_port0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'AXIBursts2PixelStream_Pipeline_aximm2bytes/m_axi_port0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'AXIBursts2PixelStream_Pipeline_aximm2bytes/m_axi_port0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'AXIBursts2PixelStream_Pipeline_aximm2bytes/m_axi_port0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'AXIBursts2PixelStream_Pipeline_aximm2bytes/m_axi_port0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'AXIBursts2PixelStream_Pipeline_aximm2bytes/m_axi_port0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'AXIBursts2PixelStream_Pipeline_aximm2bytes/m_axi_port0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'AXIBursts2PixelStream_Pipeline_aximm2bytes/m_axi_port0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIBursts2PixelStream_Pipeline_aximm2bytes'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 340.417 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIBursts2PixelStream_Pipeline_bytes2pixels' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'AXIBursts2PixelStream_Pipeline_bytes2pixels' pipeline 'bytes2pixels' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIBursts2PixelStream_Pipeline_bytes2pixels'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 345.292 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIBursts2PixelStream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_10ns_16ns_26_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIBursts2PixelStream'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.24 seconds. CPU system time: 0.03 seconds. Elapsed time: 2.27 seconds; current allocated memory: 357.757 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2D_Pipeline_rd_coeffs' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Filter2D_Pipeline_rd_coeffs' pipeline 'rd_coeffs' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'Filter2D_Pipeline_rd_coeffs/m_axi_port1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Filter2D_Pipeline_rd_coeffs/m_axi_port1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Filter2D_Pipeline_rd_coeffs/m_axi_port1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Filter2D_Pipeline_rd_coeffs/m_axi_port1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Filter2D_Pipeline_rd_coeffs/m_axi_port1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Filter2D_Pipeline_rd_coeffs/m_axi_port1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Filter2D_Pipeline_rd_coeffs/m_axi_port1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Filter2D_Pipeline_rd_coeffs/m_axi_port1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Filter2D_Pipeline_rd_coeffs/m_axi_port1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Filter2D_Pipeline_rd_coeffs/m_axi_port1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Filter2D_Pipeline_rd_coeffs/m_axi_port1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Filter2D_Pipeline_rd_coeffs/m_axi_port1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2D_Pipeline_rd_coeffs'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.38 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.4 seconds; current allocated memory: 361.162 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2D_Pipeline_filter' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Filter2D_Pipeline_filter' pipeline 'filter' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'Filter2D_Pipeline_filter' is 5773 from HDL expression: ((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_8ns_24s_25_4_1': 93 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_8ns_25s_26_4_1': 34 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_8ns_26s_27_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_8ns_27s_28_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_8ns_28s_29_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_8ns_29s_30_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_8ns_30s_31_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_34ns_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16s_8ns_24_4_1': 93 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2D_Pipeline_filter'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.8 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.82 seconds; current allocated memory: 383.922 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2D' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16ns_16ns_32_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2D'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 9.33 seconds. CPU system time: 0.35 seconds. Elapsed time: 9.69 seconds; current allocated memory: 432.675 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PixelStream2AXIBursts_Pipeline_pixels2bytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'PixelStream2AXIBursts_Pipeline_pixels2bytes' pipeline 'pixels2bytes' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PixelStream2AXIBursts_Pipeline_pixels2bytes'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3.68 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.69 seconds; current allocated memory: 442.845 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PixelStream2AXIBursts_Pipeline_bytes2aximm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'PixelStream2AXIBursts_Pipeline_bytes2aximm' pipeline 'bytes2aximm' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'PixelStream2AXIBursts_Pipeline_bytes2aximm/m_axi_port1_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'PixelStream2AXIBursts_Pipeline_bytes2aximm/m_axi_port1_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'PixelStream2AXIBursts_Pipeline_bytes2aximm/m_axi_port1_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'PixelStream2AXIBursts_Pipeline_bytes2aximm/m_axi_port1_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'PixelStream2AXIBursts_Pipeline_bytes2aximm/m_axi_port1_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'PixelStream2AXIBursts_Pipeline_bytes2aximm/m_axi_port1_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'PixelStream2AXIBursts_Pipeline_bytes2aximm/m_axi_port1_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'PixelStream2AXIBursts_Pipeline_bytes2aximm/m_axi_port1_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'PixelStream2AXIBursts_Pipeline_bytes2aximm/m_axi_port1_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'PixelStream2AXIBursts_Pipeline_bytes2aximm/m_axi_port1_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'PixelStream2AXIBursts_Pipeline_bytes2aximm/m_axi_port1_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'PixelStream2AXIBursts_Pipeline_bytes2aximm/m_axi_port1_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'PixelStream2AXIBursts_Pipeline_bytes2aximm/m_axi_port1_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PixelStream2AXIBursts_Pipeline_bytes2aximm'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.76 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.8 seconds; current allocated memory: 453.761 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PixelStream2AXIBursts' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_10ns_16ns_26_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PixelStream2AXIBursts'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.16 seconds; current allocated memory: 456.605 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2DKernel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/port1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/port0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/coeffs' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/src' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/width' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/height' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/stride' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/dst' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Filter2DKernel' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'coeffs', 'src', 'width', 'height', 'stride', 'dst' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2DKernel'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.28 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.32 seconds; current allocated memory: 461.367 MB.
+INFO: [RTMG 210-278] Implementing memory 'Filter2DKernel_AXIBursts2PixelStream_buff_V_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'Filter2DKernel_Filter2D_pixelWindow_mLineBuffer_val_0_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'Filter2DKernel_PixelStream2AXIBursts_buff_V_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'coeffs_c_channel_U(Filter2DKernel_fifo_w64_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'dst_c_channel_U(Filter2DKernel_fifo_w64_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'src_pixels_U(Filter2DKernel_fifo_w8_d64_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'width_c9_U(Filter2DKernel_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'height_c10_U(Filter2DKernel_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stride_c_U(Filter2DKernel_fifo_w32_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'dst_pixels_U(Filter2DKernel_fifo_w8_d64_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'width_c_U(Filter2DKernel_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'height_c_U(Filter2DKernel_fifo_w32_d2_S)' using Shift Registers.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 8.18 seconds. CPU system time: 0.05 seconds. Elapsed time: 8.25 seconds; current allocated memory: 465.163 MB.
+INFO: [HLS 200-1603] Design has MAXI bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2.15 seconds. CPU system time: 0.03 seconds. Elapsed time: 2.19 seconds; current allocated memory: 478.114 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for Filter2DKernel.
+INFO: [VLOG 209-307] Generating Verilog RTL for Filter2DKernel.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 342.47 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 93.05 seconds. CPU system time: 3.84 seconds. Elapsed time: 96.34 seconds; current allocated memory: 478.099 MB.
+INFO: [HLS 200-1510] Running: export_design 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  9 17:00:54 2021...
+INFO: [HLS 200-802] Generated output file Filter2DKernel/solution/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 19.97 seconds. CPU system time: 1.37 seconds. Elapsed time: 22.06 seconds; current allocated memory: 483.226 MB.
+HLS completed successfully
+INFO: [HLS 200-112] Total CPU user time: 114.23 seconds. Total CPU system time: 5.5 seconds. Total elapsed time: 120.49 seconds; peak allocated memory: 478.114 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Thu Dec  9 17:00:54 2021...

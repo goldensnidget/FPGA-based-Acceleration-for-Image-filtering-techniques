@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vitis Analyzer v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# 
+# Start of session at: Thu Dec  9 17:01:19 2021
+# Process ID: 7787
+# Current directory: /home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D
+# Command line: vitis_analyzer /home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/xclbin/Filter2DKernel.hw_emu.xo.compile_summary
+# Log file: /home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/vitis_analyzer.log
+# Journal file: /home/ec2-user/aws-fpga-app-notes/reInvent18_Developer_Workshop/filter2D/vitis_analyzer.jou
+#-----------------------------------------------------------
+start_gui
+create_project dummy
